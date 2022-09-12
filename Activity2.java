@@ -10,12 +10,12 @@ public class App {
         
         System.out.println("Age:");
         int age = scanner.nextInt();
+        scanner.nextLine();
         
         System.out.println("GPA: ");
         double GPA = scanner.nextDouble();
         
         System.out.println("Bloodtype: ");
-        scanner.nextLine();
         String bloodType = scanner.nextLine();
         
         System.out.println("Hi, My name is "+name);
