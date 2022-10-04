@@ -5,20 +5,17 @@ public class App {
     
         Scanner scan = new Scanner(System.in);
 
-        System.out.print("number of test(s): ");
+        System.out.println("number of test cases: ");
         int testCasesCount = scan.nextInt();
 
         int[][] testCases = new int[testCasesCount][2];
 
-        for (int i=0;i<testCases.length;i++){
+        System.out.println("number of test(s): "+testCasesCount+"\nuber - grab: ");
 
-            System.out.println("test " + (i+1));
-            
-            System.out.print("uber: ");
-            testCases[i][0] = scan.nextInt();
-
-            System.out.print("grab: ");
-            testCases[i][1] = scan.nextInt();
+        for(int i = 0 ; i <testCases.length ; i++){
+            scan.hasNextInt();
+            testCases[i][0] = (scan.nextInt());
+            testCases[i][1] = (scan.nextInt());
         }
 
         scan.close();
@@ -38,6 +35,6 @@ public class App {
             }
         
         }
-        
+        //????????
     }
 }
