@@ -78,10 +78,7 @@ public class App {
         }
     }
     public static void main(String[] args) throws Exception {
-
-        System.out.println("welcome to my calkulahtohr\nPress any key to start...");
        
-
         while(true){
                        
             try {
