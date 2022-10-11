@@ -49,11 +49,30 @@ public class App {
         return firstValue;
     }
 
+    static double modulo(double firstValue){
+        System.out.println("\nModulo has been selected");
+        return firstValue%secondValue();
+    }
+
+    static double exponent(double firstValue){
+        System.out.println("\nExponent has been selected");
+
+        while(true){
+            double secondValue = secondValue();
+            if(Double.isInfinite(Math.pow(firstValue, secondValue))){
+                printError("too big for the system");
+            }
+            else{
+                return Math.pow(firstValue, secondValue);
+            }
+        }
+    }
+
     public static double compute(){
 
         double firstValueInput = firstValue();
 
-        System.out.print("\narithmetic operator selection\n 1  2  3  4  5\n[+][-][x][/][√]: ");
+        System.out.print("\narithmetic operator selection\n 1  2  3  4  5  6\n[+][-][x][/][%][ex]: ");
         byte operator = scanner.nextByte();
         
         switch(operator){
@@ -70,7 +89,10 @@ public class App {
                 return division(firstValueInput);
 
             case 5:
-                return Math.sqrt(firstValueInput);
+                return modulo(firstValueInput);
+
+            case 6:
+                return exponent(firstValueInput);
             
             default:
                printError("follow the instruction pls...");
@@ -78,9 +100,9 @@ public class App {
         }
     }
     public static void main(String[] args) throws Exception {
-       
+
         while(true){
-                       
+
             try {
                 System.out.println("\nanswer: " + compute());
                 break;
